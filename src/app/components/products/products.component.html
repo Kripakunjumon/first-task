@@ -1,0 +1,73 @@
+<div class="cart-top container-fluid">
+    <div class="container d-flex">
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>Top offers</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="">
+                <h6>Grocerry</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="">
+                <h6>Mobiles</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100" alt="">
+                <h6>Home</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt="">
+                <h6>Appliances</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100" alt="">
+                <h6>Travel</h6>
+            </a>
+        </div>
+        <div class="items">
+            <a href="">
+                <img class="w-50" src="https://rukminim2.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="">
+                <h6>Beauty & Toys</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img class="w-100" src="{{item.image}}" alt="">
+                <h5>{{item.title}}</h5>
+                <p>{{item.price}}</p>
+                <p>{{item.category}}</p>
+                <!-- <p>{{item.description}}</p> -->
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to Cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
