@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component';
-import { LoginComponent } from './login/login.component';
+
 
 const routes: Routes = [
   {path:'',redirectTo:'products',pathMatch:'full'},
   {path:'products',component:ProductsComponent},
-  {path:'cart',component:CartComponent}
-  {path: '', component: LoginComponent },
-  { path: 'login', component: LoginComponent }
-];
+  {path:'cart',component:CartComponent},
+  {path: 'login',loadChildren: () => import('./login/login.module').then(m => m.LoginModule)}
+]
+  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
